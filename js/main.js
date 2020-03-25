@@ -5,7 +5,6 @@ const filter = document.getElementById("filter");
 let limit = 5;
 let page = 1;
 // fetch post
-
 async function getPosts() {
   const res = await fetch(
     `https://jsonplaceholder.typicode.com/posts?_limit=${limit}&page=${page}`
@@ -37,10 +36,10 @@ async function showPost() {
   });
 }
 function showLoading() {
-  loading.classList.add("show");
+    loading.style.opacity ="1"
 
   setTimeout(() => {
-    loading.classList.remove("show");
+    loading.style.opacity ="0"
 
     setTimeout(() => {
       page++;
